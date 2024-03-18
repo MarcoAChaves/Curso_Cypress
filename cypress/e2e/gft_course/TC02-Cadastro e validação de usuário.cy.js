@@ -2,9 +2,9 @@
 
 describe('Realizar a inclusão de usuário e validar dados', () => {
     var nome = 'Marco Antonio';
-  var fullname = 'Cordeiro Silva Chaves';
-  var email = 'mocv@gft.com';
-  var age = 46;
+    var fullname = 'Cordeiro Silva Chaves';
+    var email = 'mocv@gft.com';
+    var age = 45;
 
   it('Criar novo usuário', ()=> {
     
