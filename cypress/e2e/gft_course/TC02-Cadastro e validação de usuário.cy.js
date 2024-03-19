@@ -24,6 +24,7 @@ describe('Realizar a inclusão de usuário e validar dados', () => {
     cy.get('#email').should('contain', email)
     cy.get('#age').should('contain', age)
     
+    
   });
     
 });
