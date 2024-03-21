@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-const { setFips } = require('crypto');
-
 describe('Realizar a inclusão de usuário e validar dados', () => {
 
     it('Utilizando fixture', () => {
@@ -25,13 +23,13 @@ describe('Realizar a inclusão de usuário e validar dados', () => {
             cy.get('#age').should('contain', user.age)
         });
 
-          cy.get('#codigo').then(($cod) => {
-          cy.writeFile('/cypress/userCod.json', $cod.text())
-             });
+            cy.get('#codigo').then(($cod) => {
+            cy.writeFile('/cypress/fixtures/userCod.txt', $cod.text())
+            });
 
-            cy.readFile('/cypress/userCod.json').then(codUsr => {
-           cy.log(codUsr)
-           expect(codUsr).to.be.not.null
+            cy.readFile('/cypress/fixtures/userCod.txt').then(codUsr => {
+             cy.log(codUsr)
+            expect(codUsr).to.be.not.null
+           });
+          });    
         });
-      });
-    });
